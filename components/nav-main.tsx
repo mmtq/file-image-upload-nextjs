@@ -15,6 +15,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar"
+import Link from "next/link"
 
 export function NavMain({
   items,
@@ -51,7 +52,7 @@ export function NavMain({
                 >
                   {item.items.map((item) => (
                     <DropdownMenuItem asChild key={item.title}>
-                      <a href={item.url}>{item.title}</a>
+                      <Link href={item.url}>{item.title}</Link>
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
